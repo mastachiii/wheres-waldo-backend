@@ -15,7 +15,7 @@ class LevelController {
 
     async getLevel(req, res, next) {
         try {
-            const level = await db.getLevel(req.params.id);
+            const level = await db.getLevel(+req.params.id);
 
             res.send(level);
         } catch (err) {

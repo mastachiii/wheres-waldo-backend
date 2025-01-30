@@ -23,9 +23,18 @@ class Level {
 
         return levels;
     }
-}
 
-const db = new Level();
+    async getLevel(id) {
+        const level = await prisma.level.findUnique({
+            where: { id },
+            include: {
+                attempts: true,
+            },
+        });
+
+        return level;
+    }
+}
 
 // db.createLevel({
 //     name: "hollywood",
