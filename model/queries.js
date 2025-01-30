@@ -23,6 +23,15 @@ class Level {
 
         return levels;
     }
+
+    async getLevel(id) {
+        const level = await prisma.level.findUnique({
+            where: { id },
+            include: {
+                attempts: true,
+            },
+        });
+    }
 }
 
 const db = new Level();
@@ -56,6 +65,4 @@ const db = new Level();
 //     wizard: "1500, 624",
 // });
 
-module.exports = {
-    level: new Level(),
-};
+db.getAllLevels();
