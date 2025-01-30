@@ -19,6 +19,7 @@ model Level {
   sceneName String    @unique
   waldo     String? // Coordinates of character on level
   wenda     String?
+  wilma     String?
   woof      String?
   odlaw     String?
   wizard    String?
