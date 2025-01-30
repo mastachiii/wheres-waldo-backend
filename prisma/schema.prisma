@@ -17,12 +17,11 @@ model Level {
   id        Int       @id @default(autoincrement())
   name      String    @unique
   sceneName String    @unique
-  imgPath   String
-  waldo     String // Coordinates of character on level
-  odlaw     String
-  wenda     String
-  wizard    String
-  woof      String
+  waldo     String? // Coordinates of character on level
+  wenda     String?
+  woof      String?
+  odlaw     String?
+  wizard    String?
   attempts  Attempt[]
 }
 
