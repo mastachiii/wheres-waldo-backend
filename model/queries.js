@@ -46,4 +46,14 @@ const db = new Level();
 //     wizard: "483, 527",
 // });
 
+// db.createLevel({
+//     name: "space",
+//     sceneName: "The Future",
+//     waldo: "777, 672",
+//     wilma: "566, 560",
+//     woof: "1128, 981",
+//     odlaw: "136, 743",
+//     wizard: "1500, 624",
+// });
+
 db.getAllLevels();
