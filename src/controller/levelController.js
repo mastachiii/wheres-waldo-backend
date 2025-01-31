@@ -7,7 +7,7 @@ class LevelController {
         try {
             const levels = await db.getAllLevels();
 
-            res.status(200).send(levels);
+            res.status(200).json({ levels });
         } catch (err) {
             next(err);
         }
@@ -17,7 +17,7 @@ class LevelController {
         try {
             const level = await db.getLevel(+req.params.id);
 
-            res.status(200).send(level);
+            res.status(200).json({ level });
         } catch (err) {
             next(err);
         }
