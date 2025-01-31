@@ -1,4 +1,4 @@
-const { format, differenceInMinutes } = require("date-fns");
+const { differenceInSeconds } = require("date-fns");
 const { level } = require("../model/queries");
 
 const db = require("../model/queries").level;
@@ -27,11 +27,9 @@ class LevelController {
     async createLevelAttempt(req, res, next) {
         try {
             const { name, timeStarted } = req.body;
-            const timeFinished = differenceInMinutes(new Date(), new Date(timeStarted));
+            const timeFinished = differenceInSeconds(new Date(), new Date(timeStarted));
 
-            console.log(timeFinished);
-
-            console.log(req.body);
+            await db.updateLevel({ timeFinished, playerName: name, id: +req.params.id });
         } catch (err) {
             next(err);
         }

@@ -34,6 +34,20 @@ class Level {
 
         return level;
     }
+
+    async updateLevel({ timeFinished, playerName, id }) {
+        await prisma.level.update({
+            where: { id },
+            data: {
+                attempts: {
+                    create: {
+                        timeFinished,
+                        playerName,
+                    },
+                },
+            },
+        });
+    }
 }
 
 const db = new Level();

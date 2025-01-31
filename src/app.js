@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const { differenceInMinutes, differenceInSeconds, sub } = require("date-fns");
 
 // Routes
 const level = require("./routes/levelRoutes");
@@ -9,7 +10,7 @@ const app = express();
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors())
+app.use(cors());
 app.use("/levels", level);
 
 app.get("/", (req, res) => res.send("Hello Express"));
