@@ -36,6 +36,8 @@ class Level {
     }
 }
 
+const db = new Level();
+
 // Populate db...
 // db.createLevel({
 //     name: "hollywood",
