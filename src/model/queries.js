@@ -19,7 +19,11 @@ class Level {
     }
 
     async getAllLevels() {
-        const levels = await prisma.level.findMany();
+        const levels = await prisma.level.findMany({
+            orderBy: {
+                id: "asc",
+            },
+        });
 
         return levels;
     }
@@ -28,7 +32,11 @@ class Level {
         const level = await prisma.level.findUnique({
             where: { id },
             include: {
-                attempts: true,
+                attempts: {
+                    orderBy: {
+                        timeFinished: "asc",
+                    },
+                },
             },
         });
 
