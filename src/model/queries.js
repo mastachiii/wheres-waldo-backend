@@ -64,10 +64,10 @@ const db = new Level();
 // db.createLevel({
 //     name: "hollywood",
 //     sceneName: "When the Stars Come Out",
-//     waldo: "1350, 532",
-//     woof: "1635, 805",
-//     wilma: "1136, 832",
-//     odlaw: "1066, 986",
+//     waldo: "1351, 464",
+//     woof: "1635, 699",
+//     wilma: "1136, 723",
+//     odlaw: "1066, 858",
 // });
 
 // db.createLevel({

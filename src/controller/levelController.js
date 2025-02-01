@@ -30,6 +30,8 @@ class LevelController {
             const timeFinished = differenceInSeconds(new Date(), new Date(timeStarted));
 
             await db.updateLevel({ timeFinished, playerName: name, id: +req.params.id });
+
+            return res.status(200).json({ timeFinished });
         } catch (err) {
             next(err);
         }
