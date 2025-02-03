@@ -12,7 +12,7 @@ level.createLevel({
 
 level.createLevel({
     name: "fruit",
-    sceneName: "The Might Fruit Fight",
+    sceneName: "The Mighty Fruit Fight",
     waldo: "1712, 716",
     wilma: "256, 917",
     woof: "1684, 615",
