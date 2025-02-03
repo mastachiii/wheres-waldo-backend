@@ -36,6 +36,7 @@ class Level {
                     orderBy: {
                         timeFinished: "asc",
                     },
+                    take: 20,
                 },
             },
         });
