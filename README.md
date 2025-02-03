@@ -4,7 +4,7 @@ Backend for my Where's Waldo game
 
 [Front-end](https://github.com/mastachiii/wheres-waldo-frontend)
 
-** Built with 
+## Built with 
 
 * Node.js / Express
 * Prisma
